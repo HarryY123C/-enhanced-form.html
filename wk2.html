@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f7f9fc;
+        }
+        header, main, footer {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enhanced HTML5 Registration Form</h1>
+        <p>Fill in the form below to register for our event. Please ensure all required fields are completed.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Event Details</h2>
+            <ul>
+                <li>Date: 25th September 2025</li>
+                <li>Location: Virtual (Zoom link will be sent)</li>
+                <li>Theme: "Innovating for the Future"</li>
+            </ul>
+
+            <h3>Schedule Overview</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Session</th>
+                        <th>Speaker</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>Opening Remarks</td>
+                        <td>Jane Doe</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>Keynote Speech</td>
+                        <td>Dr. John Smith</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 PM</td>
+                        <td>Panel Discussion</td>
+                        <td>Industry Experts</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="https://via.placeholder.com/750x250.png?text=Event+Banner" alt="Event Banner">
+                <figcaption>Join us for an inspiring day of learning and networking.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name" required>
+
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000" pattern="\+?\d{1,4}[\d\s]{3,}" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">-- Select Gender --</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event Preferences</legend>
+
+                    <label>Session Interests:</label>
+                    <input type="checkbox" id="session1" name="interests" value="tech">
+                    <label for="session1">Technology Innovations</label>
+
+                    <input type="checkbox" id="session2" name="interests" value="business">
+                    <label for="session2">Business Growth</label>
+
+                    <input type="checkbox" id="session3" name="interests" value="networking">
+                    <label for="session3">Networking</label>
+
+                    <label for="diet">Dietary Restrictions:</label>
+                    <textarea id="diet" name="diet" placeholder="E.g., Vegetarian, Halal, Allergies"></textarea>
+
+                    <label for="refcode">Referral Code:</label>
+                    <input type="text" id="refcode" name="refcode" value="AUTO-REGISTER" readonly>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Setup</legend>
+                    
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" minlength="8" required>
+
+                    <label for="confirmpassword">Confirm Password:</label>
+                    <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter password" minlength="8" required>
+                </fieldset>
+
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Future Innovators Conference. All rights reserved.
+    </footer>
+</body>
+</html>
